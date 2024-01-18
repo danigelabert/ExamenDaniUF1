@@ -16,8 +16,8 @@ interface AlumnesDao {
     fun getAlumnes(): LiveData<List<Alumnes>>
 
     @Query("SELECT * FROM students  where note >= 5")
-    fun getAlumneAprovats(id:Int): LiveData<List<Alumnes>>
+    fun getAlumneAprovats(): LiveData<List<Alumnes>>
 
     @Query("SELECT * FROM students  where note < 5")
-    fun getAlumneNoAprovats(id:Int): LiveData<List<Alumnes>>
+    fun getAlumneNoAprovats(): LiveData<List<Alumnes>>
 }
