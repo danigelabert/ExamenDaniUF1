@@ -2,9 +2,6 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--    <?xml version="1.0" encoding="utf-8"?>-->
-<!--    <layout xmlns:tools="http://schemas.android.com/tools"-->
-<!--        xmlns:android="http://schemas.android.com/apk/res/android">-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,73 +49,3 @@
              tools:ignore="MissingConstraints" />
     </FrameLayout>
 </layout>
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        tools:context=".ui.InsertFragment">-->
-
-
-<!--        <EditText-->
-<!--            android:id="@+id/nameEditText"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Name"-->
-<!--            android:layout_marginLeft="80dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:inputType="text"-->
-<!--            tools:ignore="MissingConstraints"/>-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/grupEditText"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="text"-->
-<!--            android:hint="@string/grup"-->
-<!--            android:layout_marginLeft="80dp"-->
-<!--            android:layout_marginTop="150dp"-->
-<!--            tools:ignore="MissingConstraints" />-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/notaEditText"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="number"-->
-<!--            android:hint="@string/nota"-->
-<!--            tools:layout_editor_absoluteX="100dp"-->
-<!--            tools:layout_editor_absoluteY="228dp"-->
-<!--            tools:ignore="MissingConstraints" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/btnInsert"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/insertBtn"-->
-<!--            tools:layout_editor_absoluteX="157dp"-->
-<!--            tools:layout_editor_absoluteY="338dp"-->
-<!--            tools:ignore="MissingConstraints" />-->
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--</layout>-->
-
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<layout xmlns:tools="http://schemas.android.com/tools"-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        tools:context=".ui.InsertFragment">-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/nomEditText"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="124dp"-->
-<!--            android:layout_marginTop="72dp"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="text"-->
-<!--            android:hint="Nom" />-->
-<!--    </FrameLayout>-->
-<!--</layout>-->
