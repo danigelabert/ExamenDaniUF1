@@ -5,4 +5,7 @@
     <string name="grup">GRUP</string>
     <string name="nota">NOTA</string>
     <string name="insertBtn">+</string>
+    <string name="grups">Grups</string>
+    <string name="notes">Notes</string>
+    <string name="nom">Nom</string>
 </resources>
