@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,8 +37,13 @@ class GrupFragment : Fragment() {
             inflater,
             R.layout.fragment_grup, container, false
         )
-        grupsViewModel = ViewModelProvider(this).get(grupsViewModel::class.java)
+        grupsViewModel = ViewModelProvider(this).get(grupViewModel::class.java)
+        // Importante requireActivity() para mostrar los datos de un fragment a otro con el shared view model
+//        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
+//        binding.plusButton.setOnClickListener {
+//            Navigation.findNavController(it).navigate(R.id.action_catalegFragment_to_insertCatalegFragment)
+//        }
 
         viewManager = LinearLayoutManager(context)
         recyclerView = binding.recyclerAlumnes.apply {
@@ -44,14 +51,33 @@ class GrupFragment : Fragment() {
             layoutManager = viewManager
         }
 
-        grupsViewModel.obtenirMobles(requireContext())?.observe(viewLifecycleOwner, Observer { alumnesLlistat ->
-            alumnesLlistat?.let {
+        grupsViewModel.obtenirMobles(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
+            moblesLlistat?.let {
                 viewAdapter = AlumnesAdapter(it) { selectedItem ->
+//                    sharedViewModel.setSelectedItem(selectedItem)
+//                    findNavController().navigate(R.id.action_catalegFragment_to_editCatalegFragment)
                 }
                 recyclerView.adapter = viewAdapter
             }
         })
 
+//        binding.buscarButton.setOnClickListener {
+//            val nom = binding.buscarNom.text.toString()
+//            val preu = binding.buscarPreu.text.toString().trim() // Es posa toString.trim() per poder fer la condició si es empty o no en el preu ja que es un int no string
+//            // Condició per si els valors de nom y preu de buscar son buits i si es fa clic al boto que no peti la app que salta un toast y retorni a dalt
+//            if (nom.isEmpty() || preu.isEmpty()) {
+//                Toast.makeText(requireContext(), "Sisplau, completi tots els camps", Toast.LENGTH_SHORT).show()
+//                return@setOnClickListener
+//            }
+//            // Es posa preu.toInt per pasar preu amb string a Int
+//            catalegViewModel.buscarMobles(requireContext(), nom, preu.toInt())?.observe(viewLifecycleOwner, Observer { mobles ->
+//                if (mobles.isNotEmpty()) {
+//                    Toast.makeText(requireContext(), "Producte trobat", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Toast.makeText(requireContext(), "Producte NO trobat", Toast.LENGTH_SHORT).show()
+//                }
+//            })
+//        }
 
         return binding.root
     }

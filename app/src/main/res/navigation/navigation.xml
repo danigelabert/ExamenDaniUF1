@@ -8,10 +8,18 @@
     <fragment
         android:id="@+id/insertFragment"
         android:name="com.danigelabert.examendani.ui.InsertFragment"
-        android:label="InsertFragment" />
+        android:label="InsertFragment" >
+        <action
+            android:id="@+id/action_insertFragment_to_grupFragment"
+            app:destination="@id/grupFragment" />
+    </fragment>
     <fragment
         android:id="@+id/grupFragment"
         android:name="com.danigelabert.examendani.ui.GrupFragment"
         android:label="fragment_grup"
-        tools:layout="@layout/fragment_grup" />
+        tools:layout="@layout/fragment_grup" >
+        <action
+            android:id="@+id/action_grupFragment_to_insertFragment"
+            app:destination="@id/insertFragment" />
+    </fragment>
 </navigation>

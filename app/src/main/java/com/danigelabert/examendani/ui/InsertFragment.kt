@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.danigelabert.examendani.R
 import com.danigelabert.examendani.databinding.FragmentInsertBinding
 import com.danigelabert.examendani.viewmodel.InsertViewModel
@@ -35,6 +36,13 @@ class InsertFragment : Fragment() {
 
             insertViewModel.newAlumnes(requireContext(), nom, grup, nota)
 //            Navigation.findNavController(it).navigate(R.id.action_insertCatalegFragment_to_catalegFragment)
+
+
+
+        }
+
+        binding.button?.setOnClickListener{
+            findNavController().navigate(R.id.action_insertFragment_to_grupFragment, null)
         }
 
 

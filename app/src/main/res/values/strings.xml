@@ -8,4 +8,5 @@
     <string name="grups">Grups</string>
     <string name="notes">Notes</string>
     <string name="nom">Nom</string>
+    <string name="togroup">ToGroup</string>
 </resources>
