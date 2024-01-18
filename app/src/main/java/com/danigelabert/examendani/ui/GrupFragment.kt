@@ -54,6 +54,8 @@ class GrupFragment : Fragment() {
         grupsViewModel.obtenirMobles(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
             moblesLlistat?.let {
                 viewAdapter = AlumnesAdapter(it) { selectedItem ->
+                    Toast.makeText(requireContext(), "Sisplau, completi tots els camps", Toast.LENGTH_SHORT).show()
+
 //                    sharedViewModel.setSelectedItem(selectedItem)
 //                    findNavController().navigate(R.id.action_catalegFragment_to_editCatalegFragment)
                 }
@@ -78,6 +80,43 @@ class GrupFragment : Fragment() {
 //                }
 //            })
 //        }
+
+        recyclerView.setOnClickListener{
+            Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.button2?.setOnClickListener{
+            findNavController().navigate(R.id.action_grupFragment_to_insertFragment, null)
+        }
+
+        binding.showAprovats.setOnClickListener{
+            grupsViewModel.getAlumnesAprovats(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
+                moblesLlistat?.let {
+                    viewAdapter = AlumnesAdapter(it) { selectedItem ->
+                        Toast.makeText(requireContext(), "Sisplau, completi tots els camps", Toast.LENGTH_SHORT).show()
+
+//                    sharedViewModel.setSelectedItem(selectedItem)
+//                    findNavController().navigate(R.id.action_catalegFragment_to_editCatalegFragment)
+                    }
+                    recyclerView.adapter = viewAdapter
+                }
+            })
+        }
+
+        binding.showNoAprovats.setOnClickListener{
+            grupsViewModel.getAlumnesNoAprovats(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
+                moblesLlistat?.let {
+                    viewAdapter = AlumnesAdapter(it) { selectedItem ->
+                        Toast.makeText(requireContext(), "Sisplau, completi tots els camps", Toast.LENGTH_SHORT).show()
+
+//                    sharedViewModel.setSelectedItem(selectedItem)
+//                    findNavController().navigate(R.id.action_catalegFragment_to_editCatalegFragment)
+                    }
+                    recyclerView.adapter = viewAdapter
+                }
+            })
+        }
+
 
         return binding.root
     }

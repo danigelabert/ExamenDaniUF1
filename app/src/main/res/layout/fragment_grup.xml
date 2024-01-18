@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.GrupFragment">
@@ -11,6 +11,30 @@
             android:id="@+id/recyclerAlumnes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="toInsert"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="670dp"/>
+
+        <Button
+            android:id="@+id/showAprovats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="showAprovats"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="670dp"/>
+
+        <Button
+            android:id="@+id/showNoAprovats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="showNoAprovats"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="670dp" />
 
     </FrameLayout>
 </layout>

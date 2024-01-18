@@ -31,11 +31,13 @@ class AlumnesAdapter(private val alumnes: List<Alumnes>, private val onItemClick
 
         holder.itemView.setOnClickListener {
             onItemClick.invoke(alumne)
+
         }
 
         holder.nom.text = alumne.nom
         holder.grup.text = alumne.grup
         holder.nota.text = alumne.nota.toString()
+
     }
 
     // Devuelve el tamaño de tu conjunto de datos (invocada por el layout manager)
